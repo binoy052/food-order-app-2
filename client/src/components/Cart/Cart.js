@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useState } from "react";
 import CartItem from "./CartItem";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
@@ -37,8 +37,9 @@ const Cart = (props) => {
       user: userData,
       orderedItems,
     };
-    console.log(sendData);
-    await fetch(`/order`, {
+    //console.log(sendData);
+    const url = `${process.env.REACT_APP_API}/order`;
+    await fetch(url, {
       method: "POST",
       mode: "cors",
       body: JSON.stringify(sendData),

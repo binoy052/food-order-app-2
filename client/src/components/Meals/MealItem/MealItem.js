@@ -1,4 +1,3 @@
-import { useContext, useDebugValue } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./MealItem.module.css";
 import MealItemForm from "./MealItemForm";
@@ -31,7 +30,7 @@ const MealItem = (props) => {
         <div className={classes.price}>&#8377;{price}</div>
       </div>
       <div>
-        <img src={props.img} />
+        <img src={props.img} alt="food" />
       </div>
       <div>
         <MealItemForm id={props.id} onAddToCart={addToCartHandler} />

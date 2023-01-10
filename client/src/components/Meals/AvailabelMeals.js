@@ -10,7 +10,9 @@ const AvailabelMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(`/meals`);
+      const url = `${process.env.REACT_APP_API}/meals`;
+
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
