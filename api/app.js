@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 // const dbUrl = "mongodb://localhost:27017/food-order";
 
-mongoose.connect(process.env.DB_URl);
+mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -37,6 +37,8 @@ app.post("/api/order", async (req, res) => {
   res.status(200).json("success");
 });
 
-app.listen(8080, () => {
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
   console.log("Server started at port 8080");
 });
