@@ -1,7 +1,7 @@
 {
   "name": "food-order-app",
   "version": "0.1.0",
-  "home": "http://binoy052.github.io/food-order-app-2",
+  "homepage": "http://binoy052.github.io/food-order-app-2",
   "private": true,
   "proxy": "https://food-order-backend-new.herokuapp.com/api",
   "dependencies": {
